@@ -1,17 +1,14 @@
 const express = require('express');
+var bodyParser = require('body-parser');
 const app = express();
 const mongoose = require('mongoose');
 const userRouter = require('./userRouter');
-var bodyParser = require('body-parser');
+var morgan = require('morgan');
 
-//BodyParser
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
- 
-// parse application/json
-app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
-//app.use(express.json());
+app.use(morgan('dev'));
 
 app.use('/api',userRouter);
 
