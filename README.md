@@ -1,4 +1,1 @@
 # ExpenseManager
-
-
-Test Text

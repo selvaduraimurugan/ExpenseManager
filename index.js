@@ -25,5 +25,3 @@ mongoose.connect('mongodb://localhost:27017/userAuth',
 app.use('/',(req,res) => {
     res.send('Hii');
 });
-
-//Test Comment
